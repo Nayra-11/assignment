@@ -1,45 +1,43 @@
 import 'package:flutter/material.dart';
 
 class Catogery extends StatelessWidget {
-   Catogery ({super.key,required this.color});
-  Color color;
+  const Catogery({super.key, required this.color});
+
+  final Color color;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
-        height: 200,
-        decoration:
-        BoxDecoration(
+        height: MediaQuery.of(context).size.height * 0.25,
+        decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: color,
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        child: Stack(
           children: [
-           Row(
-             mainAxisAlignment: MainAxisAlignment.start,
-             children: [
-               Padding(
-                 padding: const EdgeInsets.only(left: 10.0,top: 10.0),
-                 child: Text('Top Left',style: TextStyle(color: Colors.white,fontSize: 27),),
-               ),
-             ],
-           ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Center',style: TextStyle(color: Colors.white,fontSize: 27),),
-              ],
+            Positioned(
+              top: 10,
+              left: 10,
+              child: Text(
+                'Top Left',
+                style: TextStyle(color: Colors.white, fontSize: 27),
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Padding(
-                  padding: const EdgeInsets.only(right: 10.0,bottom: 10.0),
-                  child: Text('Bottom Right',style: TextStyle(color: Colors.white,fontSize: 27),),
-                ),
-              ],
+            Center(
+              child: Text(
+                'Center',
+                style: TextStyle(color: Colors.white, fontSize: 27),
+              ),
+            ),
+            Positioned(
+              bottom: 10,
+              right: 10,
+              child: Text(
+                'Bottom Right',
+                style: TextStyle(color: Colors.white, fontSize: 27),
+              ),
             ),
           ],
         ),
