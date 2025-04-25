@@ -21,7 +21,7 @@ A simple yet well-structured Flutter UI assignment designed as part of a layout 
 | ![UI Screenshot](assets/images/1.jpg) |
 | ![UI Screenshot](assets/images/2.jpg) |
 
-> 💡 Replace the above path with your actual image path inside your Flutter project, or host it online and use a direct URL.
+
 
 ---
 
